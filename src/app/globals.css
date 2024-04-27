@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+#body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--Light-grayish-blue);
+}
+#daniel {
+  background-position: calc(100% - 20px) 0;
+}
+
+@media only screen and (min-width: 849px) {
+  #testimonial {
+    grid-template-areas: 
+    "daniel daniel johnathan"
+    "jeanette patrick patrick"
+    "kira kira kira";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  #daniel {
+    grid-area: daniel;
+  }
+  #jonathan {
+    grid-area: johnathan;
+  }
+  #jeanette {
+    grid-area: jeanette;
+  }
+  #kira {
+    grid-area: kira;
+  }
+  #patrick {
+    grid-area: patrick;
+  }
+}
+
+@media only screen and (min-width: 1135px) {
+  #testimonial {
+    grid-template-areas: 
+    "daniel daniel johnathan kira"
+    "jeanette patrick patrick kira";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #daniel {
+    grid-area: daniel;
+  }
+  #jonathan {
+    grid-area: johnathan;
+  }
+  #jeanette {
+    grid-area: jeanette;
+  }
+  #kira {
+    grid-area: kira;
+  }
+  #patrick {
+    grid-area: patrick;
+  }
+}
